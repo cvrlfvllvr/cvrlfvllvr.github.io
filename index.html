@@ -3,18 +3,22 @@
     <head>
         <meta charset="UTF-8">
         <title>Carl Fuller</title>
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="assets/css/style.css">
     </head>
 
     <body>
-        <header> <h1>Carl Fuller</h1> </header>
-        <nav>
+
+        <div>
+        <header class="left"> <h1>Carl Fuller</h1> </header>
+        <nav class="right">
             <ul>
                 <li><a href="About Me/aboutme.html">About Me</a></li>
                 <li><a href="Contact/contact.html">Contact</a></li>
                 <li><a href="Portfolio/portfolio.html">Portfolio</a></li>
             </ul>
         </nav>
+        </div>
+
         <main>
             <h1>About Me</h1>
             <img src="assets/images/headshot.png" alt="Carl Fuller's Headshot" width="200px" height="200px">
@@ -33,10 +37,29 @@
             </ul>
         </nav>
         <main>
-            <h2>Contact</h2>
-            <h3>Name</h3>
-            <h3>Email</h3>
-            <h3>Message</h3>
+            <div class="container">
+                <form action="action_page.php">
+                      
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                      
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                      
+                    <label for="country">Country</label>
+                    <select id="country" name="country">
+                    <option value="australia">Australia</option>
+                    <option value="canada">Canada</option>
+                    <option value="usa">USA</option>
+                    </select>
+                      
+                    <label for="subject">Subject</label>
+                    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                      
+                    <input type="submit" value="Submit">
+                      
+                </form>
+            </div>
         </main>
         <footer>
             Copyright
